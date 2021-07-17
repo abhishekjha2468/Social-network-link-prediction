@@ -1,0 +1,33 @@
+Social Network Graph link prediciton
+
+1. Problem Statement: 
+	- Given a directed social graph, we have to predict missing links to recommend friends/connections/followers (Link prediction in graph)
+
+2. Data Overview: 
+	- Two columns- source_node and destination_node
+	- Each row represents an directed edge from source_node to destination_node
+	- Number of vertices: 18,62,220
+	- Number of edges/datapoints: 9437520
+
+3. Mapping to ML supervised Learning problem:
+	- An important task is to create new features form the two columns from given pair of vertices(u_i, u_j):
+		1. Is there an edge from u_j to u_i
+		2. How many common vertices are being followed by u_i and u_j
+
+4. Business objective and constraints:
+	- No low-latency requirement
+	- Predicting the probability of a link is useful because we want to recommend the links with highest probability to the user
+	- We want to suggest the most correct links and we don't want to miss out any useful links -- high precision and recall
+
+5. Performance metric and supervised learning:
+	- precision, recall, f1-score, confusion matrix
+
+6. libraries:
+	- pandas, numpy, matplotlib, networkx
+
+7. Exploratory Data Analysis:
+	- Number of unique persons- 1862220
+	-  
+
+
+
